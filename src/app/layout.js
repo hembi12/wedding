@@ -55,11 +55,10 @@ export default function RootLayout({ children }) {
       <body className="antialiased bg-white text-gray-900">
         {/* Carga optimizada del script de Google Maps */}
         <Script
-          src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
+          src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&libraries=marker`}
           strategy="afterInteractive"
           async
         />
-        
         <div className="min-h-screen flex flex-col">
           <main className="flex-grow">{children}</main>
         </div>
