@@ -48,6 +48,7 @@ export default function CustomMap() {
         typeof window !== "undefined" &&
         window.google &&
         window.google.maps &&
+        window.google.maps.marker &&
         mapRef.current &&
         !mapLoaded
       ) {
@@ -58,6 +59,7 @@ export default function CustomMap() {
           zoom: 18,
           styles: customMapStyle,
           disableDefaultUI: false,
+          mapId: process.env.NEXT_PUBLIC_GOOGLE_MAP_ID, // 🔑 Map ID desde .env
         });
 
         const { AdvancedMarkerElement } = window.google.maps.marker;
@@ -66,7 +68,7 @@ export default function CustomMap() {
           map,
           position: center,
           title: "Centro Cultural Pedregal",
-        });        
+        });
 
         const infoWindow = new window.google.maps.InfoWindow({
           content: `
@@ -106,10 +108,7 @@ export default function CustomMap() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1, delay: 0.6 }}
     >
-      <div
-        ref={mapRef}
-        className="w-full aspect-[4/3] h-auto"
-      />
+      <div ref={mapRef} className="w-full aspect-[4/3] h-auto" />
     </motion.div>
   );
 }
