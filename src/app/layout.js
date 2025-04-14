@@ -15,7 +15,7 @@ const lora = Lora({
 });
 
 export const metadata = {
-  title: "Wedding App",
+  title: "Boda de Héctor y Michelle",
   description: "Sistema interno para la organización de la boda",
   icons: {
     icon: "/favicon_io/favicon.ico",
@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
 
       <body className="antialiased bg-white text-gray-900">
         <Script
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf8Pi_qpAE8jnm6VW0LZKkqc5e3CALWoM&callback=Function.prototype"
+          src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&callback=Function.prototype`}
           strategy="afterInteractive"
           async
           defer
