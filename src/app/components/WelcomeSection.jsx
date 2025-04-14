@@ -13,9 +13,6 @@ export default function WelcomeSection() {
       transition={{ duration: 1.2, ease: "easeOut" }}
       className="relative overflow-hidden px-4 sm:px-6 md:px-12 text-center"
     >
-      {/* Decoración superior */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-[url('/decor-top.svg')] bg-no-repeat bg-top bg-contain pointer-events-none" />
-
       {/* Encabezado */}
       <motion.h1
         id="welcome-heading"
@@ -79,9 +76,6 @@ export default function WelcomeSection() {
       >
         “El amor no mira con los ojos, sino con el alma.” — William Shakespeare
       </motion.p>
-
-      {/* Decoración inferior */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-[url('/decor-bottom.svg')] bg-no-repeat bg-bottom bg-contain pointer-events-none" />
     </motion.section>
   );
 }
