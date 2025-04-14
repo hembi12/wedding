@@ -60,11 +60,13 @@ export default function CustomMap() {
           disableDefaultUI: false,
         });
 
-        const marker = new window.google.maps.Marker({
-          position: center,
+        const { AdvancedMarkerElement } = window.google.maps.marker;
+
+        const marker = new AdvancedMarkerElement({
           map,
+          position: center,
           title: "Centro Cultural Pedregal",
-        });
+        });        
 
         const infoWindow = new window.google.maps.InfoWindow({
           content: `
