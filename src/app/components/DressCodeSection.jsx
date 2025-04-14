@@ -35,8 +35,8 @@ export default function DressCodeSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4 }}
       >
-        Por favor viste con <strong>elegancia formal</strong>. Este día tan
-        especial merece atuendos que reflejen su importancia.
+        Vístete con <strong>elegancia formal</strong> para este día tan
+        especial.
       </motion.p>
 
       {/* Imágenes de referencia */}
@@ -75,8 +75,9 @@ export default function DressCodeSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
       >
-        Evita colores como blanco o tonos claros, ya que están reservados para
-        la novia. ¡Gracias por tu comprensión!
+        Te pedimos evitar el blanco o tonos muy claros, ya que están reservados
+        para la novia. ¡Gracias por entender y ayudarnos a hacer este día aún
+        más especial!
       </motion.p>
 
       {/* Muestra de colores prohibidos */}
