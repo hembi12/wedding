@@ -1,5 +1,6 @@
 import { Playfair_Display, Lora } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -28,11 +29,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${playfair.variable} ${lora.variable}`}>
       <head>
-        {/* Meta tags para dispositivos y tema */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#ffffff" />
 
-        {/* Favicons y manifest */}
         <link
           rel="icon"
           type="image/png"
@@ -73,6 +72,9 @@ export default function RootLayout({ children }) {
         <div className="min-h-screen flex flex-col">
           <main className="flex-grow">{children}</main>
         </div>
+
+        {/* Vercel Analytics */}
+        <Analytics />
       </body>
     </html>
   );
