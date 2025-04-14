@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Héctor y Michelle Boda//Calendario//ES
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+DTSTART;TZID=America/Mexico_City:20250628T140000
+DTEND;TZID=America/Mexico_City:20250628T235900
+SUMMARY:Boda de Héctor y Michelle
+DESCRIPTION:Estamos muy emocionados de compartir este día tan especial contigo. ¡Gracias por acompañarnos!
+LOCATION:Av. de Las Fuentes 557, Jardines del Pedregal, Álvaro Obregón, 01900 Ciudad de México, CDMX
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
