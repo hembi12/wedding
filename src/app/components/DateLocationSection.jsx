@@ -16,7 +16,7 @@ export default function DateLocationSection() {
       {/* Título */}
       <motion.h2
         id="date-location-heading"
-        className="text-4xl sm:text-5xl font-bold leading-tight"
+        className="text-4xl sm:text-5xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
@@ -26,7 +26,7 @@ export default function DateLocationSection() {
 
       {/* Lugar */}
       <motion.p
-        className="mt-4 text-xl sm:text-2xl text-[#6F5129] font-text max-w-2xl mx-auto"
+        className="text-lg sm:text-xl md:text-2xl text-[#6F5129] font-text mt-4 max-w-3xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4 }}

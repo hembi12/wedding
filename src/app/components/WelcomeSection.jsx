@@ -25,7 +25,7 @@ export default function WelcomeSection() {
         <span className="text-4xl sm:text-5xl md:text-6xl font-light">
           &
         </span>
-        <span className="block">Michelle Hernandez</span>
+        <span className="block">Michelle Hernández</span>
       </motion.h1>
 
       {/* Imagen con marco elegante */}

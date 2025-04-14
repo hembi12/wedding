@@ -31,12 +31,12 @@ export default function GiftsSection() {
       </motion.h2>
 
       <motion.p
-        className="text-lg sm:text-xl text-[#6F5129] font-text leading-relaxed max-w-2xl mx-auto"
+        className="text-lg sm:text-xl md:text-2xl text-[#6F5129] font-text mt-4 max-w-3xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4 }}
       >
-        Lo más importante para nosotros es compartir este día contigo. Si deseas hacernos un obsequio, aquí tienes algunas opciones.
+        Si deseas hacernos un obsequio, aquí tienes algunas opciones.
       </motion.p>
 
       <div className="grid gap-8 sm:grid-cols-2 md:gap-10 font-text">

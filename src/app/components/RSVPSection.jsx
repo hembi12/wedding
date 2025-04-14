@@ -15,7 +15,7 @@ export default function RSVPSection() {
     >
       <motion.h2
         id="rsvp-heading"
-        className="text-4xl sm:text-5xl font-bold text-[#4a2f1a] font-titles"
+        className="text-4xl sm:text-5xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
@@ -24,12 +24,12 @@ export default function RSVPSection() {
       </motion.h2>
 
       <motion.p
-        className="text-lg sm:text-xl text-[#6F5129] font-text leading-relaxed max-w-2xl mx-auto"
+        className="text-lg sm:text-xl md:text-2xl text-[#6F5129] font-text mt-4 max-w-3xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4 }}
       >
-        Por favor confírmanos si podrás acompañarnos en este día tan especial. Tu presencia es muy importante para nosotros.
+        Por favor confírmanos si podrás acompañarnos en este día tan especial.
       </motion.p>
 
       <motion.div

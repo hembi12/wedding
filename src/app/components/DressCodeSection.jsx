@@ -30,7 +30,7 @@ export default function DressCodeSection() {
       </motion.h2>
 
       <motion.p
-        className="mt-4 text-lg sm:text-xl text-[#6F5129] leading-relaxed font-text max-w-3xl mx-auto"
+        className="mt-4 text-lxl sm:text-2xl text-[#6F5129] leading-relaxed font-text max-w-2xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4 }}

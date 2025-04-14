@@ -83,7 +83,7 @@ export default function LoveStoryGallerySection() {
     >
       <motion.h2
         id="love-story-title"
-        className="text-4xl sm:text-5xl md:text-5xl font-bold font-titles text-[#4a2f1a] leading-tight"
+        className="text-4xl sm:text-5xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
