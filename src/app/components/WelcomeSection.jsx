@@ -47,7 +47,7 @@ export default function WelcomeSection() {
 
       {/* Subtítulo decorado */}
       <motion.p
-        className="mt-6 italic text-[#6F5129] font-text text-xl sm:text-2xl md:text-3xl"
+        className="mt-6 italic text-lg sm:text-xl md:text-2xl text-[#6F5129] font-text max-w-3xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4 }}
