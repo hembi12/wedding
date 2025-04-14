@@ -3,41 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-const customMapStyle = [
-  {
-    elementType: "geometry",
-    stylers: [{ color: "#fcfaf9" }],
-  },
-  {
-    elementType: "labels.text.fill",
-    stylers: [{ color: "#5c3a21" }],
-  },
-  {
-    elementType: "labels.text.stroke",
-    stylers: [{ color: "#f5f0eb" }],
-  },
-  {
-    featureType: "road",
-    elementType: "geometry",
-    stylers: [{ color: "#d7c1ae" }],
-  },
-  {
-    featureType: "road",
-    elementType: "labels.text.fill",
-    stylers: [{ color: "#6e4f3a" }],
-  },
-  {
-    featureType: "water",
-    elementType: "geometry",
-    stylers: [{ color: "#c9d5d8" }],
-  },
-  {
-    featureType: "poi",
-    elementType: "geometry",
-    stylers: [{ color: "#e4d4c3" }],
-  },
-];
-
 export default function CustomMap() {
   const mapRef = useRef(null);
   const [mapLoaded, setMapLoaded] = useState(false);
@@ -57,9 +22,8 @@ export default function CustomMap() {
         const map = new window.google.maps.Map(mapRef.current, {
           center,
           zoom: 18,
-          styles: customMapStyle,
           disableDefaultUI: false,
-          mapId: process.env.NEXT_PUBLIC_GOOGLE_MAP_ID, // 🔑 Map ID desde .env
+          mapId: process.env.NEXT_PUBLIC_GOOGLE_MAP_ID, // Estilo definido en la consola de Google Maps
         });
 
         const { AdvancedMarkerElement } = window.google.maps.marker;
@@ -77,21 +41,24 @@ export default function CustomMap() {
               <p style="margin: 4px 0;">Av. de Las Fuentes 557<br>Jardines del Pedregal, Álvaro Obregón</p>
               <p style="margin: 4px 0;">CDMX, 01900</p>
               <a
-              href="https://maps.app.goo.gl/u7YyfPTrtAZgTypk8"
-              target="_blank"
-              rel="noopener"
-              style="color: #3367d6; font-weight: bold;"
+                href="https://maps.app.goo.gl/u7YyfPTrtAZgTypk8"
+                target="_blank"
+                rel="noopener"
+                style="color: #3367d6; font-weight: bold;"
               >
-              Cómo llegar →
+                Cómo llegar →
               </a>
             </div>
           `,
         });
 
-        infoWindow.open(map, marker);
-        marker.addListener("click", () => {
+        // ✅ Usa gmp-click para AdvancedMarkerElement
+        marker.addEventListener("gmp-click", () => {
           infoWindow.open(map, marker);
         });
+
+        // También abrirlo por default al cargar
+        infoWindow.open(map, marker);
 
         setMapLoaded(true);
         clearInterval(interval);
