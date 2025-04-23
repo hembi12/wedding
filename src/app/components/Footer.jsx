@@ -16,17 +16,7 @@ export default function Footer() {
       </p>
 
       <p className="text-md sm:text-lg md:text-xl text-[#8F6B36] font-text mt-4 max-w-3xl mx-auto">
-        Sitio creado con 💕 por{" "}
-        <a
-          href="https://hectormartil.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline hover:text-[#B18A50] font-semibold"
-          aria-label="Sitio web personal de Héctor Martil"
-        >
-          Héctor
-        </a>{" "}
-        & Michelle
+        Sitio creado con 💕 por Héctor & Michelle
       </p>
     </motion.footer>
   );
