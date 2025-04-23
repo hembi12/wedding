@@ -17,7 +17,7 @@ const lora = Lora({
 
 export const metadata = {
   title: "Boda de Héctor y Michelle",
-  description: "Sistema interno para la organización de la boda",
+  description: "Invitación digital para la boda de Héctor y Michelle",
   icons: {
     icon: "/favicon_io/favicon.ico",
   },
@@ -55,17 +55,13 @@ export default function RootLayout({ children }) {
 
       <body className="antialiased bg-white text-gray-900">
         {/* Google Maps API Script */}
-        {mapsApiKey ? (
+        {mapsApiKey && (
           <Script
             src={`https://maps.googleapis.com/maps/api/js?key=${mapsApiKey}&libraries=marker`}
             strategy="afterInteractive"
             async
             defer
           />
-        ) : (
-          <div className="bg-red-100 text-red-700 text-center p-4 font-medium">
-            ⚠️ Falta la clave de Google Maps API. Agrega <code>NEXT_PUBLIC_GOOGLE_MAPS_API_KEY</code> en tu entorno.
-          </div>
         )}
 
         {/* Contenido principal */}
