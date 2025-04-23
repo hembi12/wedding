@@ -2,13 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  Gift,
-  PiggyBank,
-  ShoppingCart,
-  Smile,
-  Copy,
-} from "lucide-react";
+import { Gift, PiggyBank, ShoppingCart, Smile, Copy } from "lucide-react";
 
 export default function GiftsSection() {
   return (
@@ -64,14 +58,7 @@ const giftOptions = [
         <p className="text-[#6F5129] text-sm sm:text-base leading-relaxed">
           Hemos creado una mesa de regalos en Amazon con artículos seleccionados con cariño.
         </p>
-        <a
-          href="https://www.amazon.com.mx/wedding/hector-y-michelle"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block text-sm sm:text-base text-[#6F5129] hover:text-[#B18A50] underline font-medium transition-colors duration-200"
-        >
-          Ver mesa en Amazon
-        </a>
+        <GiftLinks />
       </>
     ),
   },
@@ -113,6 +100,43 @@ function GiftCard({ icon: Icon, title, content }) {
       <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-[#6F5129]" aria-hidden="true" />
       <h3 className="text-lg sm:text-xl font-semibold text-[#6F5129]">{title}</h3>
       {content}
+    </div>
+  );
+}
+
+function GiftLinks() {
+  const [mostrar, setMostrar] = useState(false);
+
+  return (
+    <div>
+      <button
+        type="button"
+        onClick={() => setMostrar(!mostrar)}
+        className="text-sm sm:text-base text-[#6F5129] underline font-medium hover:text-[#B18A50] transition-colors duration-200"
+      >
+        {mostrar ? "Ocultar detalles" : "Ver detalles"}
+      </button>
+
+      {mostrar && (
+        <div className="space-y-2 mt-4">
+          <a
+            href="https://www.amazon.com.mx/wedding/share/hectorymichelle"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block text-sm sm:text-base text-[#6F5129] hover:text-[#B18A50] underline font-medium transition-colors duration-200"
+          >
+            Ver mesa en Amazon
+          </a>
+          <a
+            href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51517785"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block text-sm sm:text-base text-[#6F5129] hover:text-[#B18A50] underline font-medium transition-colors duration-200"
+          >
+            Ver mesa en Liverpool
+          </a>
+        </div>
+      )}
     </div>
   );
 }
