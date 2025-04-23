@@ -208,7 +208,6 @@ export default function RSVPForm() {
           rows={3}
           value={form.mensaje}
           onChange={handleChange}
-          placeholder="Por ejemplo: tengo alergias, usaré silla de ruedas, etc."
           className="w-full border border-[#B18A50] rounded-lg px-4 py-2 bg-white/90 text-[#5c3a21] focus:ring-2 focus:ring-[#e7d6c2]"
         />
       </div>
