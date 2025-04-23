@@ -219,7 +219,7 @@ export default function RSVPForm() {
           disabled={!form.asistencia || enviando}
           className="bg-[#6F5129] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#B18A50] transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {enviando ? "Enviando..." : "Confirmar asistencia"}
+          {enviando ? "Enviando..." : "Confirmar respuesta"}
         </button>
       </div>
     </form>
