@@ -113,12 +113,14 @@ function GiftLinks() {
         type="button"
         onClick={() => setMostrar(!mostrar)}
         className="text-sm sm:text-base text-[#6F5129] underline font-medium hover:text-[#B18A50] transition-colors duration-200"
+        aria-expanded={mostrar}
+        aria-controls="gift-links"
       >
         {mostrar ? "Ocultar detalles" : "Ver detalles"}
       </button>
 
       {mostrar && (
-        <div className="space-y-2 mt-4">
+        <div id="gift-links" className="space-y-2 mt-4">
           <a
             href="https://www.amazon.com.mx/wedding/share/hectorymichelle"
             target="_blank"
@@ -162,12 +164,14 @@ function ToggleTransferencia() {
         type="button"
         onClick={() => setMostrar(!mostrar)}
         className="text-sm sm:text-base underline font-medium text-[#6F5129] hover:text-[#B18A50] transition-colors duration-200"
+        aria-expanded={mostrar}
+        aria-controls="transferencia-details"
       >
         {mostrar ? "Ocultar detalles" : "Ver detalles"}
       </button>
 
       {mostrar && (
-        <div className="text-sm sm:text-base text-[#5c3a21] space-y-1">
+        <div id="transferencia-details" className="text-sm sm:text-base text-[#5c3a21] space-y-1">
           <p><strong>Banco:</strong> BBVA</p>
           <p><strong>Nombre:</strong> Héctor Martil</p>
           <p><strong>CLABE:</strong> {clabe}</p>

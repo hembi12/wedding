@@ -48,21 +48,21 @@ export default function GuestMessagesSection() {
 
   return (
     <motion.section
-      id="love-messages" 
+      id="love-messages"
       className="text-center px-4 sm:px-6 md:px-12 max-w-6xl mx-auto"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.2, ease: "easeOut" }}
-      aria-labelledby="love-messages-title" // Indicamos que esta sección está relacionada con el título
+      aria-labelledby="love-messages-title"
     >
       <motion.h2
-        id="love-messages-title" // Aseguramos que el título tenga un ID accesible
+        id="love-messages-title"
         className="text-4xl sm:text-5xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
-        role="heading" // Especificamos que es un encabezado
-        aria-level="2" // Nivel del encabezado (importante para navegación con lectores de pantalla)
+        role="heading"
+        aria-level="2"
       >
         Mensajes de amor
       </motion.h2>
@@ -73,7 +73,8 @@ export default function GuestMessagesSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4 }}
       >
-        Aquí compartimos los mensajes que nuestros invitados nos dejaron con todo su cariño.
+        Aquí compartimos los mensajes que nuestros invitados nos dejaron con
+        todo su cariño.
       </motion.p>
 
       {/* Primera fila */}
@@ -90,7 +91,7 @@ export default function GuestMessagesSection() {
               message={message}
               data={messageData[i]}
               index={`row1-${i}`}
-              aria-live="assertive" // Aseguramos que los mensajes se actualicen de forma accesible
+              aria-live="assertive"
             />
           ))}
         </motion.div>

@@ -101,6 +101,7 @@ export default function FAQSection() {
                 aria-expanded={abiertaEsta}
                 aria-controls={respuestaId}
                 id={preguntaId}
+                aria-live="polite"
               >
                 <span>{item.pregunta}</span>
                 {abiertaEsta ? (

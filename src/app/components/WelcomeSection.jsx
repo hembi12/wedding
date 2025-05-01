@@ -37,7 +37,7 @@ export default function WelcomeSection() {
       >
         <Image
           src="/portada-boda.webp"
-          alt="Foto de portada de la boda de Héctor y Michelle"
+          alt="Fotografía de Héctor Martil y Michelle Hernández, un retrato de ellos como pareja."
           width={800}
           height={600}
           className="object-cover w-full h-auto"

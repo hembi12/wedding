@@ -19,6 +19,7 @@ export default function DressCodeSection() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1.2, ease: "easeOut" }}
     >
+      {/* Título */}
       <motion.h2
         id="dress-code-heading"
         className="text-4xl sm:text-5xl"
@@ -29,6 +30,7 @@ export default function DressCodeSection() {
         Código de Vestimenta
       </motion.h2>
 
+      {/* Descripción */}
       <motion.p
         className="mt-4 text-lxl sm:text-2xl text-[#6F5129] leading-relaxed font-text max-w-2xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
@@ -49,7 +51,7 @@ export default function DressCodeSection() {
         <div className="flex flex-col items-center space-y-2">
           <img
             src="/images/ref2.webp"
-            alt="Ejemplo de vestimenta para mujeres"
+            alt="Ejemplo de vestimenta formal para mujeres"
             className="object-cover rounded-lg border-2 border-[#B18A50] shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-105"
           />
           <span className="text-sm sm:text-base text-[#6F5129] font-text font-medium">
@@ -60,8 +62,8 @@ export default function DressCodeSection() {
         <div className="flex flex-col items-center space-y-2">
           <img
             src="/images/ref1.webp"
-            alt="Ejemplo de vestimenta para hombres"
-            className=" object-cover rounded-lg border-2 border-[#B18A50] shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-105"
+            alt="Ejemplo de vestimenta formal para hombres"
+            className="object-cover rounded-lg border-2 border-[#B18A50] shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-105"
           />
           <span className="text-sm sm:text-base text-[#6F5129] font-text font-medium">
             Ejemplo para hombres
@@ -69,6 +71,7 @@ export default function DressCodeSection() {
         </div>
       </motion.div>
 
+      {/* Nota de valet */}
       <motion.p
         className="mt-8 text-sm sm:text-base italic text-[#6F5129] font-text max-w-xl mx-auto"
         initial={{ opacity: 0, y: 20 }}

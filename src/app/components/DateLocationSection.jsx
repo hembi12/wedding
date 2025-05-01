@@ -41,11 +41,17 @@ export default function DateLocationSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
       >
-        <div className="bg-white/90 backdrop-blur-sm px-6 py-2 rounded-full shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-105 text-base sm:text-lg">
+        <div
+          className="bg-white/90 backdrop-blur-sm px-6 py-2 rounded-full shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-105 text-base sm:text-lg"
+          aria-label="Horario de recepción"
+        >
           Recepción: <span className="font-bold">2:30 PM</span>
         </div>
-        <div className="bg-white/90 backdrop-blur-sm px-6 py-2 rounded-full shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-105 text-base sm:text-lg">
-        Ceremonia: <span className="font-bold">3:00 PM</span>
+        <div
+          className="bg-white/90 backdrop-blur-sm px-6 py-2 rounded-full shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-105 text-base sm:text-lg"
+          aria-label="Horario de ceremonia"
+        >
+          Ceremonia: <span className="font-bold">3:00 PM</span>
         </div>
       </motion.div>
 
@@ -60,7 +66,7 @@ export default function DateLocationSection() {
       </motion.p>
 
       {/* Mapa (estilos ya incluidos en el componente) */}
-      <CustomMap />
+      <CustomMap aria-label="Ubicación del evento en Centro Cultural Pedregal, Ciudad de México" />
     </motion.section>
   );
 }

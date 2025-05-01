@@ -9,18 +9,14 @@ import {
   Gift,
   CheckCircle,
   HelpCircle,
-  MailOpen, // Añadido para la sección de mensajes de amor
+  MailOpen,
 } from "lucide-react";
 
 const links = [
   { label: "Inicio", href: "#welcome-title", icon: <Home size={20} /> },
-  { label: "Mensajes de Amor", href: "#love-messages", icon: <MailOpen size={20} /> }, // Nueva sección antes de Historia
+  { label: "Mensajes de Amor", href: "#love-messages", icon: <MailOpen size={20} /> },
   { label: "Historia", href: "#love-story", icon: <Heart size={20} /> },
-  {
-    label: "Ubicación",
-    href: "#date-location-title",
-    icon: <MapPin size={20} />,
-  },
+  { label: "Ubicación", href: "#date-location-title", icon: <MapPin size={20} /> },
   { label: "Vestimenta", href: "#dress-code-title", icon: <Shirt size={20} /> },
   { label: "Regalos", href: "#gifts-title", icon: <Gift size={20} /> },
   { label: "RSVP", href: "#rsvp-title", icon: <CheckCircle size={20} /> },
@@ -42,7 +38,7 @@ export default function DockNavbar() {
 
           if (window.scrollY > 0 && !showNavbar) {
             setShowNavbar(true);
-            setTimeout(() => setHasFadedIn(true), 100); // Delay para que el fade se note
+            setTimeout(() => setHasFadedIn(true), 100);
           }
 
           for (let i = links.length - 1; i >= 0; i--) {
@@ -81,6 +77,7 @@ export default function DockNavbar() {
                 ? "scale-125 text-[#4a2f1a] drop-shadow-[0_0_8px_rgba(74,47,26,0.6)]"
                 : "text-[#6F5129] hover:scale-110"
             }`}
+            aria-current={activeSection === href ? "page" : undefined}
           >
             <div className="relative w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center">
               {icon}

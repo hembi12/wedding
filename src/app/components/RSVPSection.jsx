@@ -19,6 +19,8 @@ export default function RSVPSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
+        role="heading" 
+        aria-level="2" 
       >
         Confirma tu asistencia
       </motion.h2>
@@ -28,6 +30,7 @@ export default function RSVPSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4 }}
+        aria-describedby="rsvp-description"
       >
         Por favor confírmanos si podrás acompañarnos en este día tan especial.
       </motion.p>
@@ -37,6 +40,7 @@ export default function RSVPSection() {
         initial={{ opacity: 0, scale: 0.97 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 0.6 }}
+        aria-live="polite"
       >
         <RSVPForm />
       </motion.div>
