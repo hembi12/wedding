@@ -9,10 +9,12 @@ import {
   Gift,
   CheckCircle,
   HelpCircle,
+  MailOpen, // Añadido para la sección de mensajes de amor
 } from "lucide-react";
 
 const links = [
   { label: "Inicio", href: "#welcome-title", icon: <Home size={20} /> },
+  { label: "Mensajes de Amor", href: "#love-messages", icon: <MailOpen size={20} /> }, // Nueva sección antes de Historia
   { label: "Historia", href: "#love-story", icon: <Heart size={20} /> },
   {
     label: "Ubicación",
@@ -65,7 +67,7 @@ export default function DockNavbar() {
 
   return (
     <nav
-      className={`fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-[calc(100%-2rem)] sm:max-w-sm md:max-w-md lg:max-w-md bg-white/80 backdrop-blur-md border border-[#B18A50] rounded-full shadow-lg px-3 sm:px-4 py-2 flex justify-center gap-2 sm:gap-3 md:gap-5 transition-opacity duration-700 ease-out ${
+      className={`fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-[calc(100%-2rem)] sm:max-w-sm md:max-w-md lg:max-w-md bg-white/80 backdrop-blur-md border border-[#B18A50] rounded-full shadow-lg px-3 sm:px-4 py-2 flex justify-center gap-2 sm:gap-3 md:gap-3 transition-opacity duration-700 ease-out ${
         hasFadedIn ? "opacity-100" : "opacity-0"
       }`}
     >

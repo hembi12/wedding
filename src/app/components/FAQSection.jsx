@@ -18,7 +18,7 @@ const faqs = [
   {
     pregunta: "¿A qué hora termina la celebración de la boda?",
     respuesta:
-      "La celebración finalizará a las 9:00 PM.",
+      "La celebración finalizará a las 10:00 PM.",
   },
   {
     pregunta: "¿Puedo cambiar mi confirmación más adelante?",

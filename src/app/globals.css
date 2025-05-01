@@ -68,4 +68,65 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+/* === Oculta la barra de scroll === */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE y Edge */
+  scrollbar-width: none; /* Firefox */
+}
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Opera */
+}
+
+/* === Animación para marquee izquierda → derecha === */
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* === Animación para marquee derecha → izquierda === */
+@keyframes scroll-marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* === Contenedor general del marquee === */
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+/* === Pista del marquee (scroll hacia la izquierda) === */
+.marquee-track {
+  display: flex;
+  gap: 1.5rem; /* Tailwind gap-6 equivalente */
+  animation: scroll-marquee 40s linear infinite;
+  width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* === Pista del marquee (scroll hacia la derecha) === */
+.marquee-track-reverse {
+  display: flex;
+  gap: 1.5rem;
+  animation: scroll-marquee-reverse 40s linear infinite;
+  width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* === Pausar animación en hover === */
+.marquee-container:hover .marquee-track,
+.marquee-container:hover .marquee-track-reverse {
+  animation-play-state: paused;
+}
