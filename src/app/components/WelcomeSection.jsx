@@ -42,6 +42,7 @@ export default function WelcomeSection() {
           height={600}
           className="object-cover w-full h-auto"
           priority
+          layout="intrinsic" // Usar layout intrínseco para la optimización
         />
       </motion.div>
 
